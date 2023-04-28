@@ -1,0 +1,12 @@
+ <launch>
+    ...
+    <arg name="tool_frame" default="/turtle2"/>
+    <arg name="base_frame" default="/turtle1"/>
+    <arg name="tip_name" default="Middle_tip"/>
+    <!-- tf_listener Node--> 
+    <node pkg="tf_listener" type="tf_listener"
+          name="listener_tf" output="screen"/>
+    <param name="tool_frame" value="$(arg tool_frame)"/>
+    <param name="base_frame" value="$(arg base_frame)"/>
+    <param name="tip_name" value="$(arg tip_name)"/>
+  </launch>
