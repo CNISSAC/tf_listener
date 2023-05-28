@@ -82,7 +82,7 @@ int main(int argc, char** argv){
     try{
       // listener.lookupTransform("/turtle2", "/turtle1",
       //                          ros::Time(0), transform);
-      listener.lookupTransform(tool_frame, base_frame,
+      listener.lookupTransform(base_frame, tool_frame,
                                ros::Time(0), transform);                         
     }
     catch (tf::TransformException &ex) {
